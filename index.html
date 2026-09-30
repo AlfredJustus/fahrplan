@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <main>
@@ -77,13 +78,13 @@
           <h2>In Ruhe<br /><em>anfangen.</em></h2>
           <p>Fahrplan entsteht mit einer kleinen Gruppe unabhängiger Fahrschulen. Der Zugang öffnet sich nach und nach.</p>
         </div>
-        <form aria-label="Frühzugang anfragen">
+        <form aria-label="Frühzugang anfragen" novalidate>
           <label for="name">Dein Name</label>
-          <input id="name" name="name" type="text" placeholder="Vor- und Nachname" disabled />
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Vor- und Nachname" required />
           <label for="email">E-Mail</label>
-          <input id="email" name="email" type="email" placeholder="name@fahrschule.ch" disabled />
-          <button type="button" disabled>Einladungen öffnen bald <span aria-hidden="true">↗</span></button>
-          <p class="form-note">Die Anmeldung ist noch nicht geöffnet.</p>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="name@fahrschule.ch" required />
+          <button type="submit">Zugang anfragen <span aria-hidden="true">↗</span></button>
+          <p class="form-note" data-form-note aria-live="polite">Keine Verpflichtung. Wir melden uns, sobald ein Platz frei wird.</p>
         </form>
       </section>
     </main>
